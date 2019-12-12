@@ -128,7 +128,8 @@ class RSNADatasetTest(Dataset):
         return len(self.img_id)
 
     def __getitem__(self, idx):
-        img_path = '/content/drive/My Drive/testfolder/images/0000a175-0e68-4ca4-b1af-167204a7e0bc/image.png'
+       
+        img_path = '/content/DeepLearningProject/testfolder/images/0000a175-0e68-4ca4-b1af-167204a7e0bc/image.png'
           #os.path.join(self.root_dir, self.img_id[idx],'image.png')
         image = read_image(img_path, np.float32, False)
 
