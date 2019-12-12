@@ -7,18 +7,14 @@ class Option():
     """Training Configuration """
     name = "Lung-Segmentation"
     # root dir of training and validation set
-    root_dir = '/content/drive/My Drive/lung-segmentation/'
-
-    test_root = '/content/drive/My Drive/testfolder/images'
-    #'/content/drive/My Drive/testfolder/images'
-    ## Dette virker /content/drive/My Drive/lung-segmentation/images
-    result_root = '/content/drive/My Drive/Lung_segmentation_results'
-
+    root_dir = '/content/DeepLearningProject/lung-segmentation/'
+    test_root = '/content/DeepLearningProject/testfolder/images'
+    result_root = '/content/DeepLearningProject/Lung_segmentation_results'
     img_size = 256
     num_workers = 0     	# number of threads for data loading
     shuffle = False      	# shuffle the data set
     batch_size = 8   		# GTX1060 3G Memory
-    epochs = 1		# number of epochs to train
+    epochs = 2		# number of epochs to train
     plot_every = 5          # vis every N batches
     is_train = True     	# True for training, False for making prediction
     save_model = True   	# True for saving the model, False for not saving the model
@@ -34,7 +30,7 @@ class Option():
 
     is_cuda = torch.cuda.is_available()  	# True --> GPU
     num_gpus = torch.cuda.device_count()  	# number of GPUs
-    checkpoint_dir = "/content/drive/My Drive/Lung_segmentation_results/Checkpoints"  		# dir to save checkpoints
+    checkpoint_dir = "/content/DeepLearningProject/Lung_segmentation_results/Checkpoints"  		# dir to save checkpoints
     dtype = torch.cuda.FloatTensor if is_cuda else torch.Tensor  # data type
 
 opt = Option()
